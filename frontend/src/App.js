@@ -23,6 +23,7 @@ function App() {
   return (
     <div className="App">
       <Header />
+      <h1>Hello React</h1>
       <Routes>
         <Route exact path="/" element = {<Posts contents={contents} />} /> 
         <Route exact path="posts/:id" element = {<Post />} /> 

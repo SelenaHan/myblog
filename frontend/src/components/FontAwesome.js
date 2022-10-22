@@ -4,7 +4,7 @@ import { library } from '@fortawesome/fontawesome-svg-core';
 // import your icons
 
 import {
-    faHouseChimneyWindow, faPlus, faLocationDot, faHeart,faPen, faTrash
+    faHouseChimneyWindow, faPlus, faLocationDot, faHeart,faPen, faTrash, faArrowLeft
 } from '@fortawesome/free-solid-svg-icons';
 
 library.add(
@@ -13,5 +13,6 @@ library.add(
     faLocationDot,
     faHeart,
     faPen,
-    faTrash
+    faTrash,
+    faArrowLeft
 );

@@ -9,25 +9,26 @@ import './components/Posts'
 import Posts from './components/Posts';
 import AddPost from './components/AddPost';
 import Post from './components/Post';
+import EditPost from './components/EditPost';
+import Spinner from './components/Spinner';
 
 function App() {
   const [contents, setContents] = useState([]);
+  
   useEffect(() => {
       axios.get("/posts")
       .then(res => setContents(res.data))
       .catch(error => console.log(error));
   });
 
-
-
   return (
     <div className="App">
       <Header />
-      <h1>Hello React</h1>
       <Routes>
         <Route exact path="/" element = {<Posts contents={contents} />} /> 
         <Route exact path="posts/:id" element = {<Post />} /> 
         <Route exact path="/add-post" element = {<AddPost contents={contents} />} /> 
+        <Route exact path="update/:id" element = {<EditPost />} />
       </Routes>
       <Footer />
     </div>

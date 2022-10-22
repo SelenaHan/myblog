@@ -1,14 +1,15 @@
 import axios from 'axios';
 import React, {useState, useEffect} from 'react';
 import { useParams } from 'react-router-dom';
+import SinglePostCard from './SinglePostCard';
 
-const Post = (props) => {
+const Post = () => {
     const [title, setTitle] = useState('');
     const [post_content, setPost_content] = useState('');
     const { id } = useParams();
 
     useEffect(() => {
-        axios.get(`/posts/${id}`)
+        axios.get(`posts/${id}`)
         .then(res => [
             setTitle(res.data.title),
             setPost_content(res.data.post_content)
@@ -17,9 +18,7 @@ const Post = (props) => {
     });
   return (
     <div>
-        <h1>{id}</h1>
-        <h2>{title}</h2>
-        <p>{post_content}</p>
+        <SinglePostCard title={title} post_content={post_content} id={id}/>
     </div>
   )
 }

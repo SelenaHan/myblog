@@ -3,9 +3,9 @@ import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { Link } from 'react-router-dom';
-import axios from 'axios';
+import code from "../Images/code.jpg"
 
-function PostCard(props) {
+function ContentCard(props) {
     const [count, setCount] = useState(1);
     const [countNumber, setCountNumber] = useState("");
 
@@ -15,12 +15,7 @@ function PostCard(props) {
         setCountNumber("+" + count);
     }
 
-    //delete post by id
-    const deletePost = () => {
-        axios.delete(`/posts/delete/${props.id}`)
-            .then(res => alert(res.data));
-            window.location.reload(false);
-    }
+    
     return (
         <Card className="post-card">
             <Card.Body className="card-body">
@@ -30,7 +25,7 @@ function PostCard(props) {
                     {props.post_content}
                 </Card.Text>
             </Card.Body>
-            <img variant="bottom" className="card-img" src={process.env.PUBLIC_URL + `/uploads/${props.img}`} alt="...post_image" />
+            <img variant="bottom" className="card-img" src={props.img} alt="...post_image" />
             <span>
                 <Button variant="link" className='heart-btn' onClick={handleClick}><FontAwesomeIcon icon="fa-solid fa-heart" /> {countNumber}</Button>
                 <Link className="title-link" to={{ pathname: `/update/${props.id}` }}>
@@ -38,9 +33,9 @@ function PostCard(props) {
                         <FontAwesomeIcon icon="fa-solid fa-pen" /> Edit
                     </Button>
                 </Link>
-                <Button variant="link" className='card-btn' onClick={deletePost}><FontAwesomeIcon icon="fa-solid fa-trash" /> Delete</Button></span>
+                <Button variant="link" className='card-btn'><FontAwesomeIcon icon="fa-solid fa-trash" /> Delete</Button></span>
         </Card>
     )
 }
 
-export default PostCard;
+export default ContentCard;

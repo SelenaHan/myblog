@@ -9,7 +9,7 @@ const AddPost = () => {
   const [title, setTitle] = useState("");
   const [post_content, setPost_content] = useState("");
   const [message, setMessage] = useState("");
- 
+
   const [fileName, setFileName] = useState("");
 
   const onChangeFile = e => {
@@ -18,24 +18,14 @@ const AddPost = () => {
 
   const changeOnClick = e => {
     e.preventDefault();
-{/*
-    const posts = {
-      title,
-      post_content,
-      post_img
-  };
-*/}
-const formData = new FormData();
 
-formData.append("title", title);
-formData.append("post_content", post_content);
-formData.append("post_img", fileName);
+    const formData = new FormData();
 
-{/*
-    setTitle('')
-    setPost_content('')
-    setPost_img('')
-*/}
+    formData.append("title", title);
+    formData.append("post_content", post_content);
+    formData.append("post_img", fileName);
+
+
     axios.post("posts/add", formData)
       .then(res => setMessage(res.data))
       .catch(err => {
@@ -62,15 +52,15 @@ formData.append("post_img", fileName);
           <Form.Control as="textarea" placeholder="Please input the content here" rows={3} value={post_content} onChange={e => setPost_content(e.target.value)} />
         </Form.Group>
         <div>
-      
-      <label htmlFor='file'>Choose post image</label>
-      <br />
-      <input
-        type="file"
-        filename="post_img"
-        onChange={onChangeFile}
-      />
-  
+
+          <label htmlFor='file'>Choose post image</label>
+          <br />
+          <input
+            type="file"
+            filename="post_img"
+            onChange={onChangeFile}
+          />
+
         </div>
         <Button className="form-btn" variant="warning" type="submit" >
           Post

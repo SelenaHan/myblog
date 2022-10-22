@@ -22,11 +22,11 @@ router.get('/', (req, res) => {
     });
 
     //request add new post
-    router.post('/add', upload.single("post_img"), (req, res) => {
+    router.post('/add', upload.single('post_img'), (req, res) => {
         const newPost = new Posts({
             title: req.body.title,
             post_content: req.body.post_content,
-            post_img: req.file.originalname
+            post_img: req.file.originalname,
         });
 
         newPost.save().then(() => res.json("The new post posted successfully!"))

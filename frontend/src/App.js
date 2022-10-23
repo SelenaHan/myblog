@@ -27,7 +27,6 @@ function App() {
     <div className="App">
       <Header />
       <Video />
-      
       <MainPage />
       {/*
       <Routes>

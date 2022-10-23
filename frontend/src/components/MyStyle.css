@@ -1,14 +1,22 @@
 .App{
     background-color: black;
-    width: 1200px;
+    width: 1000px;
     margin: auto;
     color: #fff;
 }
-
+.video {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16/9;
+  }
+  
 .header{
     height: auto;
     width: 100%;
     
+}
+.textarea{
+    white-space: pre-line;
 }
 .profile-name{
     margin-left: 15px;
@@ -124,7 +132,7 @@ hr{
     text-align: center;
 }
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1000px) {
     .App{
         background-color: black;
         width: 100%;

@@ -27,7 +27,8 @@ const AddPost = () => {
 
 
     axios.post("posts/add", formData)
-      .then(res => setMessage(res.data))
+      .then(res => [alert(res.data),
+        setMessage(res.data)])
       .catch(err => {
         console.log(err);
       });

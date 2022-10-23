@@ -21,7 +21,7 @@ function SinglePostCard(props) {
                 </Button>
                 </Link>
       <Card.Body className="card-body">
-        <Card.Title><h3>{props.title}</h3></Card.Title>
+        <Card.Title className="textarea"><h3>{props.title}</h3></Card.Title>
         <Card.Text>
         {props.post_content}
         </Card.Text>

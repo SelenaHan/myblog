@@ -26,7 +26,7 @@ function PostCard(props) {
             <Card.Body className="card-body">
                 <Card.Title><Link className="title-link" to={{ pathname: `/posts/${props.id}` }}>
                     <h3>{props.title}</h3></Link></Card.Title>
-                <Card.Text>
+                <Card.Text className='textarea'>
                     {props.post_content}
                 </Card.Text>
             </Card.Body>

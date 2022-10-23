@@ -14,13 +14,13 @@ function ContentCard(props) {
         setCount(count + 1);
         setCountNumber("+" + count);
     }
-
+    
     
     return (
         <Card className="post-card">
             <Card.Body className="card-body">
-                <Card.Title><Link className="title-link" to={{ pathname: `/posts/${props.id}` }}>
-                    <h3>{props.title}</h3></Link></Card.Title>
+                <Card.Title> 
+                    <h3>{props.title}</h3></Card.Title>
                 <Card.Text>
                     {props.post_content}
                 </Card.Text>

@@ -12,7 +12,8 @@ import Post from './components/Post';
 import EditPost from './components/EditPost';
 import Spinner from './components/Spinner';
 import MainPage from './components/MainPage';
-
+import Video from './components/Video';
+ 
 function App() {
   const [contents, setContents] = useState([]);
   
@@ -25,6 +26,8 @@ function App() {
   return (
     <div className="App">
       <Header />
+      <Video />
+      
       <MainPage />
       {/*
       <Routes>

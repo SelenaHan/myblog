@@ -8,7 +8,7 @@ const PostContents = [
             "-	We can use this website post new posts and edit or delete new post, I also want to add a leave a like or comments or subscribe functions, I will keep updating",  <br/>,
             "-	I use Bootstrap to style my website so that my website can be displayed very nicely on screens of different sizes", <br/>,
             "-	I also write down about how to deploy a Ract project on GitHub, so that other people can see this blog", <br/>,
-            "-	This is the GitHub link of the project, you are welcome to check out the code of the project", <br/>,
+            "-	This is the <a href= \"https://github.com/SelenaHan/myblog\">GitHub link</a>  of the project, you are welcome to check out the code of the project", <br/>,
             "-	Hope you could gwt something from this post, I would aapreciate it if you have good advice or seggestion or anything please contact me. Happy coding, Enjoy!", <br/>,
             "-	Happy coding, Enjoy!", <br/>,
         ],

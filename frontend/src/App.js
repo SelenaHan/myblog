@@ -26,16 +26,17 @@ function App() {
   return (
     <div className="App">
       <Header />
-      {/*<Video />
-      <MainPage />*/}
-      
+    
+      <Video />
+      <MainPage />
+      {/*
       <Routes>
         <Route exact path="/" element = {<Posts contents={contents} />} /> 
         <Route exact path="posts/:id" element = {<Post />} /> 
         <Route exact path="/add-post" element = {<AddPost contents={contents} />} /> 
         <Route exact path="update/:id" element = {<EditPost />} />
       </Routes>
-  
+  */}
       <Footer />
     </div>
   );

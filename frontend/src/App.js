@@ -13,6 +13,7 @@ import EditPost from './components/EditPost';
 import Spinner from './components/Spinner';
 import MainPage from './components/MainPage';
 import Video from './components/Video';
+import SecondPost from './components/Post2/SecondPost';
  
 function App() {
   const [contents, setContents] = useState([]);
@@ -26,17 +27,19 @@ function App() {
   return (
     <div className="App">
       <Header />
-    
-      <Video />
-      <MainPage />
       {/*
+      <Video />
+     
+      <MainPage />
+       
       <Routes>
         <Route exact path="/" element = {<Posts contents={contents} />} /> 
         <Route exact path="posts/:id" element = {<Post />} /> 
-        <Route exact path="/add-post" element = {<AddPost contents={contents} />} /> 
+        <Route exact path="/add-post" element = {<AddPost />} /> 
         <Route exact path="update/:id" element = {<EditPost />} />
       </Routes>
-  */}
+*/}
+      <SecondPost />
       <Footer />
     </div>
   );

@@ -2,7 +2,7 @@ import React from 'react';
 import Card from 'react-bootstrap/Card';
 import './SecondStyle.css';
 
-function ConceptCard(props) {
+function LearnCard(props) {
     return (
         <div>
         <Card className="concept-card">
@@ -11,7 +11,7 @@ function ConceptCard(props) {
                 <Card.Title> 
                     <h3>{props.title}</h3></Card.Title>
                     <Card.Text>
-                        {props.description}
+<p>{props.content}</p>
                     </Card.Text>
             </Card.Body> 
         </Card>
@@ -20,4 +20,4 @@ function ConceptCard(props) {
     )
 }
 
-export default ConceptCard;
+export default LearnCard;

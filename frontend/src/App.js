@@ -14,7 +14,10 @@ import Spinner from './components/Spinner';
 import MainPage from './components/MainPage';
 import Video from './components/Video';
 import SecondPost from './components/Post2/SecondPost';
- 
+import Mern from './components/Post2/Mern';
+import Crud from './components/Post2/Crud';
+import LearnMap from './components/Post2/LearnMap';
+
 function App() {
   const [contents, setContents] = useState([]);
   

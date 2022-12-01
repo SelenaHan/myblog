@@ -1,13 +1,71 @@
-.title{
+.title, .subtitle {
     text-align: center;
 }
-.concept-card{
-    width: 20rem;
-    color: black;
+.title {
+    margin: 1rem 0;
 }
-.concept-img{
+p{
+    padding-bottom: 1rem;
+    white-space: pre-line;
+}
+.m {
+    color: #469d45;
+}
+
+.e {
+    color: #f9e021;
+}
+
+.r {
+    color: #00d8ff;
+}
+
+.n {
+    color: #479142;
+}
+.blue {
+    color:deepskyblue;
+    padding-left: 2rem;
+}
+.orange{
+    color:coral;
+    padding-left: 4rem;
+}
+.no-padding{
+    padding-bottom: 0.1rem;
+}
+.concept-card {
+    color: #fff;
+    background-color: black;
+    margin: 1rem 0 0 0;
+}
+
+.concept-img {
     border-radius: 50%;
-    border: 3px solid #fff;
-    margin-left: 15px;
+    margin: auto;
+    margin: 1rem 10%;
     width: 80%;
+}
+
+a.links:link,
+a.links:visited {
+    color: #ffca3a;
+    text-decoration: underline;
+}
+
+a.links:hover,
+a.links:active {
+    color: #fff;
+    text-decoration: underline;
+}
+@media screen and (max-width: 600px) {
+.title{
+        font-size: 1.1rem;
+    }
+    .subtitle{
+        font-size: 0.7rem;
+    }
+    h4{
+        font-size: 1rem;
+    }
 }

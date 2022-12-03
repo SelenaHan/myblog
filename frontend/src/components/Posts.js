@@ -1,8 +1,14 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
+import axios from "axios";
 import PostCard from './PostCard';
 
-const Posts = ({contents}) => {
- 
+const Posts = () => {
+  const [contents, setContents] = useState([]);
+  useEffect(() => {
+      axios.get("/posts")
+      .then(res => setContents(res.data))
+      .catch(error => console.log(error));
+  });
   return (
     <div >
         {contents.map((post, index) => (

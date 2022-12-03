@@ -5,16 +5,16 @@ import './SecondStyle.css';
 function LearnCard(props) {
     return (
         <div>
-        <Card className="concept-card">
-            <Card.Body className="concept-body">
-            <img variant="bottom" className="concept-img" src={props.img} alt="...post_image" />
-                <Card.Title> 
-                    <h3>{props.title}</h3></Card.Title>
-                    <Card.Text>
-<p>{props.content}</p>
+            <Card className="concept-card">
+                <Card.Body className="concept-body">
+                    <img variant="bottom" className="learn-img" src={props.img} alt="...post_image" />
+                    <Card.Title>
+                        <h1>{props.title}</h1></Card.Title>
+                    <Card.Text className="learn-content">
+                        <p>{props.content}</p>
                     </Card.Text>
-            </Card.Body> 
-        </Card>
+                </Card.Body>
+            </Card>
         </div>
 
     )

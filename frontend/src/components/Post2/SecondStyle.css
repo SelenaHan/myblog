@@ -23,6 +23,15 @@ p{
 .n {
     color: #479142;
 }
+.h{
+    color: #f15930;
+}
+.c{
+    color: #017dc7;
+}
+.j{
+    color: #f58232;
+}
 .blue {
     color:deepskyblue;
     padding-left: 2rem;
@@ -43,10 +52,19 @@ p{
 .concept-img {
     border-radius: 50%;
     margin: auto;
-    margin: 1rem 10%;
+    margin: 1rem 0 0 0;
+    width: 100%;
+}
+.learn-img {
+    border-radius: 50%;
+    margin: auto;
+    margin: 1rem 15%;
+    width: 70%;
+}
+.learn-content{
+    margin: auto;
     width: 80%;
 }
-
 a.links:link,
 a.links:visited {
     color: #ffca3a;
@@ -58,14 +76,23 @@ a.links:active {
     color: #fff;
     text-decoration: underline;
 }
+.t{
+    color: #ffca3a;
+}
 @media screen and (max-width: 600px) {
 .title{
-        font-size: 1.1rem;
+        font-size: 1.2rem;
     }
     .subtitle{
-        font-size: 0.7rem;
+        font-size: 1rem;
     }
     h4{
         font-size: 1rem;
+    }
+    .learn-img {
+        border-radius: 50%;
+        margin: auto;
+        margin: 1rem 25%;
+        width: 50%;
     }
 }

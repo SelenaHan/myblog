@@ -15,6 +15,7 @@ function Introduction () {
             <div><h4><a href="#map" className="links">Learning Map</a></h4></div>
             <div><h4><a href="#ud" className="links">How to implement "UPDATE" and "DELETE"?</a></h4></div>
             <div><h4><a href="#bs" className="links">How to use Bootstrap?</a></h4></div>
+            <div><h4><a href="https://github.com/SelenaHan/myblog/tree/main" className="links">Check out the Code on GitHub</a></h4></div>
         </div>
         <br />
     </div>

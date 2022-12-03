@@ -2,7 +2,7 @@ const Learnings = [
     {
         order: "1",
         title: [
-        <h1 className="title"><span className="m"></span>HTML</h1>,
+        <h1 className="title"><span className="h">HTML</span></h1>,
     ],
         content: [
             <p>Tags</p>,
@@ -19,7 +19,7 @@ const Learnings = [
     {
         order: "2",
         title: [
-            <h1 className="title"><span className="e"></span>CSS</h1>,
+            <h1 className="title"><span className="c">CSS</span></h1>,
         ],
         content: [
             <p>Selectors</p>,
@@ -37,7 +37,7 @@ const Learnings = [
     {
         order: "3",
         title: [
-            <h1 className="title"><span className="r"></span>JavaScript</h1>,
+            <h1 className="title"><span className="j">JavaScript</span></h1>,
         ],
         content: [
             <p>Data types</p>,
@@ -53,4 +53,4 @@ const Learnings = [
     
 ]
 
-export default Learnings;
+export default Learnings

@@ -1,6 +1,5 @@
-import React, {useState, useEffect} from 'react';
+import React from 'react';
 import {Routes, Route} from "react-router-dom";
-import axios from "axios";
 import Header from './components/Header';
 import Footer from './components/Footer';
 import './components/MyStyle.css';
@@ -19,13 +18,7 @@ import Crud from './components/Post2/Crud';
 import LearnMap from './components/Post2/LearnMap';
 
 function App() {
-  const [contents, setContents] = useState([]);
   
-  useEffect(() => {
-      axios.get("/posts")
-      .then(res => setContents(res.data))
-      .catch(error => console.log(error));
-  });
 
   return (
     <div className="App">
@@ -36,7 +29,7 @@ function App() {
       <MainPage />
        
       <Routes>
-        <Route exact path="/" element = {<Posts contents={contents} />} /> 
+        <Route exact path="/" element = {<Posts />} /> 
         <Route exact path="posts/:id" element = {<Post />} /> 
         <Route exact path="/add-post" element = {<AddPost />} /> 
         <Route exact path="update/:id" element = {<EditPost />} />

@@ -19,7 +19,7 @@ function Mern() {
             <Container fluid>
                 <Row>
                     {Contents.map((Content, index) => (
-                        <Col xs={3} xxs={6}>
+                        <Col md={3} xs={6}>
                             <ConceptCard title={Content.title} description={Content.description} img={Content.img} />
                         </Col>))}
                 </Row>

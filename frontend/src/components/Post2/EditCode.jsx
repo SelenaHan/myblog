@@ -1,11 +1,10 @@
-import React, { useState, useEffect } from 'react';
-import { useParams } from 'react-router-dom';
-import Form from 'react-bootstrap/Form';
-import Button from 'react-bootstrap/Button';
-import axios from 'axios';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { Link } from 'react-router-dom';
+import React from 'react';
+import { CopyBlock, dracula } from "react-code-blocks";
 
+function EditCode() {
+    return (
+        <CopyBlock
+            text={`
 const EditPost = () => {
     const [title, setTitle] = useState("");
     const [post_content, setPost_content] = useState("");
@@ -15,14 +14,14 @@ const EditPost = () => {
     const onChangeFile = e => {
         setFileName(e.target.files[0]);
     }
-
+        
     const changeOnClick = e => {
         e.preventDefault();
         const formData = new FormData();
         formData.append("title", title);
         formData.append("post_content", post_content);
         formData.append("post_img", fileName);
-        axios.put(`/posts/update/${id}`, formData)
+        axios.put(\`/posts/update/$\{id}\`, formData)
             .then(res => [alert(res.data),
             setMessage(res.data)])
             .catch(err => {
@@ -30,7 +29,7 @@ const EditPost = () => {
             });
     };
     useEffect(() => {
-        axios.get(`/posts/${id}`)
+        axios.get(\`/posts/$\{id}\`)
             .then(res => [
                 setTitle(res.data.title),
                 setPost_content(res.data.post_content),
@@ -72,5 +71,12 @@ const EditPost = () => {
         </div>
     )
 }
-
+        
 export default EditPost;
+        `}
+            language={`javascript`}
+            theme={dracula}
+        />
+    );
+}
+export default EditCode
